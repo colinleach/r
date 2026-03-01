@@ -17,7 +17,7 @@ star <- function(type) {
 [1] "red dwarf"
 ```
 
-Note that options will only fall through if the value is left blank, as with `M` in the example above. 
+Note that options will only fall through if the value is left blank, as with `M` in the example above.
 There is no need to include `break` statements as with some other languages.
 
 The final value can be a default, as here, or a [`stop()`][ref-stop] to throw an error if the conditions are intended to be exhaustive.
@@ -42,9 +42,9 @@ The [`dplyr`][ref-dplyr] package can be brought into scope by adding either `lib
 
 The `dplyr` library provides two extra functions related to `switch`.
 
-### The [`case_match`][ref-case-match] function
+### The [`case_match`][ref-case_match] function
 
-[`case_match`][ref-case-match] is essentially a vectorized version of `switch`, with some extra options.
+[`case_match`][ref-case_match] is essentially a vectorized version of `switch`, with some extra options.
 
 Matching is still exact, but:
 
@@ -70,9 +70,9 @@ case_match(
 
 ```
 
-### The [`case_when`][ref-case-when] function
+### The [`case_when`][ref-case_when] function
 
-[`case_when`][ref-case-when] takes `case_match` syntax a stage further, by allowing any logical expression on the left of the `~`.
+[`case_when`][ref-case_when] takes `case_match` syntax a stage further, by allowing any logical expression on the left of the `~`.
 
 The input vector (`x` in the example below) is not supplied as an argument, it just needs to be already defined.
 
@@ -107,13 +107,11 @@ case_when(
 #> [1] "other"  "C-like" "other"  "C-like" "vowel"  "C-like" "vowel"
 ```
 
-[ref-switch]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/switch.html
-[ref-stop]: https://stat.ethz.ch/R-manual/R-devel/library/base/html/stop.html
-[ref-dplyr]: https://dplyr.tidyverse.org/
-[ref-case-match]: https://dplyr.tidyverse.org/reference/case_match.html
-[ref-case-when]: https://dplyr.tidyverse.org/reference/case_when.html
+[ref-switch]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/switch
+[ref-stop]: https://www.rdocumentation.org/packages/base/versions/3.3.0/topics/stop
+[ref-case_match]: https://dplyr.tidyverse.org/reference/case_match.html
+[ref-case_when]: https://dplyr.tidyverse.org/reference/case_when.html
 [ref-between]: https://dplyr.tidyverse.org/reference/between.html
 [concept-nothingness]: https://exercism.org/tracks/r/concepts/nothingness
 [concept-strings]: https://exercism.org/tracks/r/concepts/strings
 [concept-regex]: https://exercism.org/tracks/r/concepts/regular-expressions
-[web-tidyverse]: https://tidyverse.org/
