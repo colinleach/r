@@ -84,8 +84,8 @@ We can check the methods available for `point2d` instances, and discover that (i
 methods(class = "point2d")
 #> no methods found
 methods(class = "list")
-#>  [1] %within%      all.equal     as.col_spec   as.data.frame as_mapper     as_tibble     coerce        common_by    
-#>  [9] Ops           pattern_alpha relist        scale_type    select        type.convert  within       
+#>  [1] %within%      all.equal     as.col_spec   as.data.frame as_mapper     as_tibble     coerce        common_by
+#>  [9] Ops           pattern_alpha relist        scale_type    select        type.convert  within
 #> see '?methods' for accessing help and source code
 ```
 
@@ -95,7 +95,7 @@ A few languages (notably Ruby) let you add and modify class methods later.
 S3 classes are very different.
 Instead of adding methods to a class, we add the class to a generic method.
 
-Anyone working interatively at the R console uses generic methods all the time, usually without thinking about how they are implemented.
+Anyone working interactively at the R console uses generic methods all the time, usually without thinking about how they are implemented.
 
 A very common example is `print()`, even though you rarely type the function name.
 Entering a value `x` by itself at the console prompt is just syntactic sugar for `print(x)`.
@@ -163,7 +163,7 @@ methods("flipvert")
 
 R now knows how to flip our point and how to display the result.
 
-We could expand this by creating classes for 3D, for polar coordinates, etc, then define methods for each.
+We could expand this by creating classes for 3D, for polar coordinates, etc., then define methods for each.
 
 From the end-user perspective, there is only `flipvert(x, ...)`, and we can rely on R to determine the input class and use the appropriate underlying implementation.
 
@@ -189,7 +189,7 @@ Generic methods such as `print()` will then search in sequence for `print.point2
 
 ### Safety
 
-Many OOP languages (Java, C#, etc) take advantage of data encapsulation within classes to perform careful compile-time checks and enforce type safety.
+Many OOP languages (Java, C#, etc.) take advantage of data encapsulation within classes to perform careful compile-time checks and enforce type safety.
 
 Please be aware that S3 lets you do pretty much whatever you like, even if it makes no sense (any error message comes later, if at all).
 
